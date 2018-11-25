@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    font-family: "Courier New";
+}
+
+input {
+    width: 500px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+input[type="date"] {
+    width: 155px;
+}
+
+button {
+    height: 30px;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #888;
+    font-size: 14px;
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #262626;
+    color: white;
+    font-size: 20px;
+    padding: 0 0 0 30px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.to-do {
+    width: 80%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-size {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.inp input{
+    width: 20px;
+}
+
+.to-do-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0 15px 0;
+}
+
+.style-item {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.check-width {
+    width: 30px;
+    height: 100%;
+}
+
+.checked-row {
+    text-decoration: line-through;
+}
+
+.name-width {
+    word-wrap: break-word;
+}
+
+@media  {
+    .name-width {
+        padding: 0 5px;
+        width: -webkit-calc(100% - 190px);
+    }
+}
+
+.date-width {
+    width: 100px;
+}
+
+.trash-width {
+    width: 50px;
+}

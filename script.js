@@ -1,7 +1,7 @@
 let taskList = [],
-    listContainer = document.getElementById("incomplete-task"),
-    newDate = document.getElementById("new-date"),
-    newName = document.getElementById("new-name");
+    listContainer = document.getElementById('incomplete-task'),
+    newDate = document.getElementById('new-date'),
+    newName = document.getElementById('new-name');
 
 function addItemToList(name, date, checked) {
     taskList.push({
@@ -42,8 +42,10 @@ function addTask() {
         printItem(newName.value, date, false, taskList.length);
         addItemToList(newName.value, date, false);
     } else {
-        alert("Заполните поля");
+        alert('Заполните поля');
     }
+    newName.value = '';
+    newDate.value = '';
 }
 
 function loadSavedData() {
@@ -68,6 +70,7 @@ function deleteItem() {
     let id = +event.target.id;
     taskList.splice(id, 1);
     listContainer.innerHTML = '';
+    localStorage.setItem('savedList', JSON.stringify(taskList));
     printList();
 }
 
